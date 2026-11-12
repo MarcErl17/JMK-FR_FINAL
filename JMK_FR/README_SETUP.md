@@ -21,3 +21,9 @@ Register -> check `users` in phpMyAdmin (password_hash column starts with `$2y$`
 - Edits (display name, bio, location, tags, photo, cover), favorites, likes, comments and hidden posts are stored in the browser's localStorage per user id. They are NOT in MySQL and do not follow the user to another browser.
 - Posts, follower/following counts and notifications are sample data (no backend tables exist for them).
 - Small changes elsewhere: `auth.js` (profile.html added to members-only/allowed pages; "Hi, Name" nav link now opens the profile), `account.html` ("View my profile" button). Resized images added: `assets/img/profile-*.jpg`.
+
+
+
+
+
+#hello
