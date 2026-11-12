@@ -25,5 +25,3 @@ Register -> check `users` in phpMyAdmin (password_hash column starts with `$2y$`
 
 
 
-
-#hello
