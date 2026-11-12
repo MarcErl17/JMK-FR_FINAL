@@ -1,0 +1,21 @@
+/* JMK FR FOODHOUSE - Login/Sign Up/Logout links in the navigation + site-wide flash banner.
+   Loaded on every page; relies on the colors already used across the website. */
+nav a.nav-signup {
+    border: 1.5px solid #ffd166;
+    color: #ffd166;
+}
+nav a.nav-signup:hover { border-color: #ffd166; }
+nav a.nav-user { color: #ffd166; cursor: pointer; }
+nav a.nav-user:hover { color: #982121; }
+
+.site-flash {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 12px 8%;
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: 2px solid #813531;
+}
+.site-flash-success { background: #1f4d34; color: #dcffe8; }
+.site-flash-error   { background: #5a1414; color: #ffd9d9; }
+.site-flash-info    { background: #3d0808; color: #ffd166; }

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JMK FR FOODHOUSE | About Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ---------- Shared Design System ---------- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #982121;
+            --surface: #6F1717;
+            --dark: #3d0808;
+            --accent: #ffd166;
+            --accent-hover: #FF611D;
+            --light: #fff5f5;
+            --muted: #ffcccc;
+            --border: #813531;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--primary);
+            color: var(--light);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        header {
+            background: var(--dark);
+            padding: 20px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border-bottom: 2px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            letter-spacing: 1px;
+            color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav a {
+            color: var(--light);
+            font-size: 15px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            color: var(--accent);
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .page-title::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 4px;
+            background: var(--accent);
+            margin: 15px auto 0;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: var(--dark);
+            border-top: 2px solid var(--accent);
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+            font-size: 14px;
+            color: var(--accent);
+            letter-spacing: 1px;
+        }
+
+        /* ---------- About Content ---------- */
+        .about-wrap {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 25px 70px;
+            width: 100%;
+        }
+
+        .tagline {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-style: italic;
+            font-weight: 500;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .about-text {
+            font-size: 17px;
+            text-align: center;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .about-text.highlight {
+            color: var(--accent);
+            font-size: 19px;
+            font-weight: 600;
+        }
+
+        .spacer {
+            height: 20px;
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 18px 5%;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav a {
+                font-size: 14px;
+                padding: 6px 10px;
+            }
+
+            .page-title {
+                font-size: 34px;
+            }
+
+            .tagline {
+                font-size: 21px;
+            }
+
+            .about-text {
+                font-size: 15px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/nav-auth.css">
+</head>
+<body>
+    <header>
+        <h1>JMK FR FOODHOUSE</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="product.html">Product</a>
+            <a href="cart.html">Cart</a>
+            <a href="contact.html">Contact</a>
+            <a href="aboutus.html" class="active">About Us</a>
+        </nav>
+    </header>
+
+    <h1 class="page-title">ABOUT US</h1>
+
+    <main class="about-wrap">
+        <h2 class="tagline">Everything is yummy, when you try me</h2>
+
+        <p class="about-text">JMK FR FOODHOUSE is a foodhouse filled with love.</p>
+        <p class="about-text">Every food is Filipino-cultured, made with the finest hands of Pinoy talents.</p>
+        <p class="about-text">Centered on a home of warmth provided by the life of Pinoys.</p>
+
+        <div class="spacer"></div>
+
+        <p class="about-text">JMK FR FOODHOUSE was established to make you feel at home even when you are away from home.</p>
+        <p class="about-text">Filipino foods all over the place, made with the sweetest and most aromatic smell of culture.</p>
+        <p class="about-text highlight">Home is everywhere with JMK FR FOODHOUSE.</p>
+    </main>
+
+    <footer>
+        <p>© 2026 JMK FR FOODHOUSE. All rights reserved.</p>
+    </footer>
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>

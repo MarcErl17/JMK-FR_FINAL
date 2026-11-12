@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | JMK FR FOODHOUSE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/auth.css">
+    <link rel="stylesheet" href="assets/css/nav-auth.css">
+    <script>document.documentElement.className = 'js';</script>
+</head>
+<body class="auth-page" data-page="signup">
+    <header>
+        <h1>JMK FR FOODHOUSE</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="product.html">Product</a>
+            <a href="cart.html">Cart</a>
+            <a href="contact.html">Contact</a>
+            <a href="aboutus.html">About Us</a>
+        </nav>
+    </header>
+
+    <main class="auth-stage">
+        <div class="auth-bg" aria-hidden="true">
+            <div class="glow glow-a"></div>
+            <div class="glow glow-b"></div>
+                <span class="dot" style="--x:38%;--s:9px;--d:12s;--t:-7s"></span>
+                <span class="dot" style="--x:75%;--s:5px;--d:15s;--t:0s"></span>
+                <span class="dot" style="--x:15%;--s:10px;--d:18s;--t:-7s"></span>
+                <span class="dot" style="--x:52%;--s:6px;--d:10s;--t:0s"></span>
+                <span class="dot" style="--x:89%;--s:11px;--d:13s;--t:-7s"></span>
+                <span class="dot" style="--x:29%;--s:7px;--d:16s;--t:0s"></span>
+                <span class="dot" style="--x:66%;--s:12px;--d:19s;--t:-7s"></span>
+                <span class="dot" style="--x:6%;--s:8px;--d:11s;--t:0s"></span>
+                <span class="dot" style="--x:43%;--s:4px;--d:14s;--t:-7s"></span>
+                <span class="dot" style="--x:80%;--s:9px;--d:17s;--t:0s"></span>
+                <span class="dot" style="--x:20%;--s:5px;--d:9s;--t:-7s"></span>
+                <span class="dot" style="--x:57%;--s:10px;--d:12s;--t:0s"></span>
+                <span class="dot" style="--x:94%;--s:6px;--d:15s;--t:-7s"></span>
+                <span class="dot" style="--x:34%;--s:11px;--d:18s;--t:0s"></span>
+                <span class="dot" style="--x:71%;--s:7px;--d:10s;--t:-7s"></span>
+                <span class="dot" style="--x:11%;--s:12px;--d:13s;--t:0s"></span>
+            <svg class="ring ring-a" viewBox="0 0 200 200"><circle cx="100" cy="100" r="96"/><circle cx="100" cy="100" r="70"/><circle cx="100" cy="100" r="44"/></svg>
+            <svg class="ring ring-b" viewBox="0 0 200 200"><circle cx="100" cy="100" r="96"/><circle cx="100" cy="100" r="62"/></svg>
+        </div>
+
+        <div class="auth-layout">
+            <aside class="auth-brand">
+                <p class="eyebrow">Welcome to</p>
+                <h2>JMK FR FOODHOUSE</h2>
+                <span class="gold-line"></span>
+                <p class="tagline">Create your account and join the JMK FR FOODHOUSE family.</p>
+            </aside>
+
+            <section class="auth-card" aria-labelledby="auth-title">
+                <div class="auth-tabs">
+                    <a href="login.html">Login</a>
+                    <a href="signup.html" class="active" aria-current="page">Sign Up</a>
+                </div>
+                <h2 id="auth-title">Create your account</h2>
+                <p class="subtitle">It only takes a minute.</p>
+
+                <div class="messages" aria-live="polite"></div>
+
+                <form id="signup-form" novalidate>
+                    <div class="field">
+                        <label for="full_name">Full name</label>
+                        <input type="text" id="full_name" name="full_name" autocomplete="name" required maxlength="100">
+                        <small class="field-error" data-for="full_name"></small>
+                    </div>
+                    <div class="field-grid">
+                        <div class="field">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" autocomplete="username" required maxlength="30">
+                            <small class="field-error" data-for="username"></small>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required maxlength="150">
+                            <small class="field-error" data-for="email"></small>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <div class="password-wrap">
+                            <input type="password" id="password" name="password" autocomplete="new-password" required maxlength="72">
+                            <button type="button" class="toggle-pw" data-target="password" aria-label="Show password" aria-pressed="false">Show</button>
+                        </div>
+                        <div class="strength" id="pw-strength" aria-hidden="true"><span></span></div>
+                        <small class="hint">At least 8 characters, with a letter and a number.</small>
+                        <small class="field-error" data-for="password"></small>
+                    </div>
+                    <div class="field">
+                        <label for="confirm_password">Confirm password</label>
+                        <div class="password-wrap">
+                            <input type="password" id="confirm_password" name="confirm_password" autocomplete="new-password" required>
+                            <button type="button" class="toggle-pw" data-target="confirm_password" aria-label="Show password" aria-pressed="false">Show</button>
+                        </div>
+                        <small class="field-error" data-for="confirm_password"></small>
+                    </div>
+                    <div class="field">
+                        <label class="check"><input type="checkbox" id="terms" name="terms" value="1">
+                            <span>I agree to the <a href="#terms-text" class="link" id="terms-link">Terms and Conditions</a></span></label>
+                        <small class="field-error" data-for="terms"></small>
+                        <details class="terms-text" id="terms-text">
+                            <summary>Read the terms</summary>
+                            <p>By creating an account you agree to provide accurate information, keep your password private,
+                               and use JMK FR FOODHOUSE services lawfully. <em>Replace this placeholder with your restaurant's final terms before going live.</em></p>
+                        </details>
+                    </div>
+                    <button type="submit" class="btn btn-block">Create Account</button>
+                </form>
+
+                <p class="switch">Already have an account? <a href="login.html">Log in</a></p>
+                <p class="back-home"><a href="landing.html">&larr; Back to homepage</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 JMK FR FOODHOUSE. All rights reserved.</p>
+    </footer>
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JMK FR FOODHOUSE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ---------- Shared Design System ---------- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #982121;
+            --surface: #6F1717;
+            --dark: #3d0808;
+            --accent: #ffd166;
+            --accent-hover: #FF611D;
+            --light: #fff5f5;
+            --muted: #ffcccc;
+            --border: #813531;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--primary);
+            color: var(--light);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        header {
+            background: var(--dark);
+            padding: 20px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border-bottom: 2px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            letter-spacing: 1px;
+            color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav a {
+            color: var(--light);
+            font-size: 15px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            border: none;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--accent-hover);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: var(--dark);
+            border-top: 2px solid var(--accent);
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+            font-size: 14px;
+            color: var(--accent);
+            letter-spacing: 1px;
+        }
+
+        /* ---------- Hero ---------- */
+        .hero {
+            min-height: 520px;
+            padding: 70px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            background: linear-gradient(135deg, var(--dark), var(--surface));
+        }
+
+        .hero-content {
+            max-width: 550px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .hero-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-style: italic;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            color: var(--muted);
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            width: 430px;
+            max-width: 100%;
+            height: 330px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 3px solid var(--accent);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        /* ---------- Categories ---------- */
+        .categories {
+            padding: 70px 8% 90px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            color: var(--muted);
+            margin-bottom: 40px;
+        }
+
+        .category-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .category-card {
+            width: 260px;
+            padding: 30px 20px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .category-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .category-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 18px 5%;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav a {
+                font-size: 14px;
+                padding: 6px 10px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 50px 25px;
+                min-height: auto;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .hero-image {
+                height: 280px;
+            }
+
+            .categories {
+                padding: 50px 20px 70px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/nav-auth.css">
+    <link rel="stylesheet" href="assets/css/landing.css">
+</head>
+<body>
+    <header>
+        <h1>JMK FR FOODHOUSE</h1>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="product.html">Product</a>
+            <a href="cart.html">Cart</a>
+            <a href="contact.html">Contact</a>
+            <a href="aboutus.html">About Us</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <span class="float" aria-hidden="true">🍛</span><span class="float" aria-hidden="true">🥤</span><span class="float" aria-hidden="true">🍰</span>
+        <div class="hero-content">
+            <h1>Welcome to<br>JMK FR FOODHOUSE</h1>
+            <h2>Everything is yummy when you try me!</h2>
+            <p>Enjoy delicious meals, refreshing drinks, and mouth-watering desserts made to satisfy your cravings.</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn">Explore Our Menu</a>
+            </div>
+        </div>
+
+        <img class="hero-image" src="heroimg.jpg" alt="Delicious food from JMK FR FOODHOUSE">
+    </section>
+
+    <section class="section featured" id="menu">
+        <h2 class="section-title">Our Featured Dishes</h2>
+        <p class="section-subtitle">Fresh from our kitchen. Order any of these from our menu.</p>
+        <div class="menu-grid">
+            <article class="menu-card"><div class="img"><img src="food1.jpg" alt="C1 food item" loading="lazy"></div><div class="body"><h3>C1</h3><p class="price">₱169.00</p><a href="product.html" class="btn">Order Now</a></div></article>
+            <article class="menu-card"><div class="img"><img src="food2.jpg" alt="C2 food item" loading="lazy"></div><div class="body"><h3>C2</h3><p class="price">₱99.00</p><a href="product.html" class="btn">Order Now</a></div></article>
+            <article class="menu-card"><div class="img"><img src="food3.jpg" alt="C3 food item" loading="lazy"></div><div class="body"><h3>C3</h3><p class="price">₱199.00</p><a href="product.html" class="btn">Order Now</a></div></article>
+        </div>
+    </section>
+
+    <section class="categories" id="categories">
+        <h2 class="section-title">Explore Our Categories</h2>
+        <p class="section-subtitle">Choose your favorite and enjoy something delicious!</p>
+
+        <div class="category-container">
+            <div class="category-card">
+                <div class="icon">🍛</div>
+                <h3>Meals</h3>
+                <p>Delicious and satisfying meals prepared for every craving.</p>
+                <a href="product.html#meals" class="btn">View Meals</a>
+            </div>
+
+            <div class="category-card">
+                <div class="icon">🥤</div>
+                <h3>Drinks</h3>
+                <p>Refreshing drinks that are perfect to complete your meal.</p>
+                <a href="product.html#drinks" class="btn">View Drinks</a>
+            </div>
+
+            <div class="category-card">
+                <div class="icon">🍰</div>
+                <h3>Dessert</h3>
+                <p>Sweet and delicious treats for every occasion.</p>
+                <a href="product.html#desserts" class="btn">View Desserts</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="about">
+            <img src="heroimg.jpg" alt="JMK FR FOODHOUSE dishes" loading="lazy">
+            <div>
+                <h2 class="section-title">About Us</h2>
+                <p>JMK FR FOODHOUSE is a foodhouse filled with love. Every food is Filipino-cultured, made with the finest hands of Pinoy talents.</p>
+                <p>We were established to make you feel at home even when you are away from home. Home is everywhere with JMK FR FOODHOUSE.</p>
+                <a href="aboutus.html" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact-strip" id="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <p>Contact number: 09923178965 &middot; Find us on Facebook, TikTok and Instagram.</p>
+        <a href="contact.html" class="btn">Contact Us</a>
+    </section>
+
+    <footer>
+        <p>© 2026 JMK FR FOODHOUSE. All rights reserved.</p>
+        <div class="foot-links"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="contact.html">Contact</a></div>
+    </footer>
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>
